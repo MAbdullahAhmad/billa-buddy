@@ -1,0 +1,73 @@
+/* src/layouts/StaticLayout/local/Header/Nav/Nav.css */
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+
+  list-style: none;
+}
+
+.nav-links li {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+
+  padding: 10px;
+}
+
+.nav-link {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--static-dull);
+  text-decoration: none;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--static-highlight);
+}
+
+.account-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  position: absolute;
+  display: none;
+  
+  padding: 12px 16px;
+  min-width: 160px;
+
+  background-color: var(--static-background);
+  box-shadow: 0px 8px 16px 0px #00000033;
+  z-index: 1;
+}
+
+.account-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Responsive nav for mobile */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+
+    top: 100%;
+    left: 0;
+    width: 100%;
+    
+    background-color: var(--static-background);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}

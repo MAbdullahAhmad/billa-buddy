@@ -1,0 +1,51 @@
+/* src/layouts/StaticLayout/StaticLayout.css */
+
+/* Config */
+/* :root { */
+  /* --static-background: #121212;
+  --static-text: #e0e0e0;
+  --static-header-bg: #333;
+  --static-footer-bg: #333;
+  --static-link: #bb86fc; */
+/* } */
+
+/* Light Theme Variables */
+.light-theme {
+  --static-background: #ffffff;
+  --static-text: #000000;
+  --static-header-bg: #eeeeee;
+  --static-footer-bg: #eeeeee;
+  --static-link: #0066cc;
+
+  --static-highlight: #000;
+  --static-dull: #666;
+}
+
+/* Dark Theme Variables */
+.dark-theme {
+  --static-background: #121212;
+  --static-text: #e0e0e0;
+  --static-header-bg: #333333;
+  --static-footer-bg: #333333;
+  --static-link: #bb86fc;
+
+  --static-highlight: #fff;
+  --static-dull: #aaa;
+}
+
+/* Wrap */
+.static-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+  color: var(--static-text);
+  
+  background-color: var(--static-background);
+}
+
+/* Main */
+.static-content {
+  flex: 1;
+  padding: 20px;
+}

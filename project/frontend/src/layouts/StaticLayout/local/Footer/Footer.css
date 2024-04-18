@@ -1,0 +1,8 @@
+/* src/layouts/StaticLayout/local/Footer/Footer.css */
+
+.static-footer {
+  background-color: var(--static-footer-bg);
+
+  padding: 10px;
+  text-align: center;
+}

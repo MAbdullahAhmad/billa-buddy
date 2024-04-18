@@ -1,0 +1,66 @@
+/* src/components/Form/Switch/Switch.css */
+/* #root {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+:root{
+    --switch-size-w: 50px;
+    --switch-size-h: 20px;
+    --switch-circle-space: 5px;
+
+    --min-wh: min(var(--switch-size-h), var(--switch-size-w));
+    --max-wh: max(var(--switch-size-h), var(--switch-size-w));
+    --swith-circle-size: calc(var(--min-wh) - var(--switch-circle-space));
+}
+
+.switch-checkbox {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.switch-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: var(--switch-size-w);
+    height: var(--switch-size-h);
+    background: grey;
+    border-radius: var(--max-wh);
+    position: relative;
+    transition: background-color .2s;
+}
+
+.switch-label .switch-button {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: var(--swith-circle-size);
+    height: var(--swith-circle-size);
+    border-radius: var(--swith-circle-size);
+    transition: 0.2s;
+    background: #fff;
+    box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+}
+
+.switch-checkbox:checked+.switch-label .switch-button {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+}
+
+.switch-checkbox:checked+.switch-label{
+    background: #06D6A0;
+}
+
+:not(.switch-checkbox:checked)+.switch-label{
+    background: #EF476F;
+}
+
+.switch-label:active .switch-button {
+    width: 60px;
+}

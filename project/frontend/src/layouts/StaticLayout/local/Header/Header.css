@@ -1,0 +1,27 @@
+/* src/layouts/StaticLayout/local/Header/Header.css */
+
+.static-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px;
+
+  color: var(--static-text);
+  background-color: var(--static-header-bg);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5em;
+}
+
