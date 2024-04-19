@@ -1,0 +1,43 @@
+/* glass.css */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark-theme .glass {
+  background: rgba(18, 18, 18, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-neon {
+  background: rgba(var(--gradient-start), 0.2); /* Using CSS var for gradient start color */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(var(--gradient-end), 0.3); /* Using CSS var for gradient end color */
+  box-shadow: var(--box-shadow); /* Using CSS var for shadow */
+}
+
+.glass-sm {
+  backdrop-filter: blur(2px);
+}
+
+.glass-md {
+  backdrop-filter: blur(5px);
+}
+
+.glass-lg {
+  backdrop-filter: blur(10px);
+}
+
+.glass-color {
+  background: rgba(55, 84, 170, 0.5); /* Blue tint */
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+
+

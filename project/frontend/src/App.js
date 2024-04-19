@@ -5,8 +5,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import SwitchRoutes from './core/util/components/SwitchRoutes';
 import routes from './routes';
 
-console.log("main", routes);
-
 function App() {
   return (
     <Router>

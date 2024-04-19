@@ -1,35 +1,26 @@
-import { forwardRef } from "react";
+// src/components/Card.js
+import React from 'react';
+import PropTypes from 'prop-types';
+import './Card.css'; // Make sure to create a corresponding CSS file for styling
 
-const isSameUserMessage = (messages, m, i) => {
-  return i > 0 && messages[i - 1].sender._id === m.sender._id;
-};
-
-const Card = forwardRef((props, ref) => {
-  const { messages, message, index } = props;
-
+const Card = ({ imageUrl, heading, subHeading, actionLink }) => {
   return (
-    <div
-      ref={ref}
-      className="model"
-      style={{
-        marginTop: `${
-          isSameUserMessage(messages, message, index) ? "5px" : "12px"
-        }`,
-      }}
-    >
-      <div>
-        <img className="model-img" src={message.imageUrl} alt="black-shoe" />
-        <p className="model-heading">{message.heading}</p>
-        <p className="model-subHeading">{message.subHeading}</p>
-      </div>
-      <div className="divider"></div>
-      <div className="action-btn-container">
-        <a href={message.actionLink} className="action-btn">
-          Buy
-        </a>
+    <div className="card">
+      <img src={imageUrl} alt={heading} className="card-image" />
+      <div className="card-content">
+        <h3 className="card-heading">{heading}</h3>
+        <p className="card-subheading">{subHeading}</p>
+        <a href={actionLink} target="_blank" rel="noopener noreferrer" className="card-action-link">Learn More</a>
       </div>
     </div>
   );
-});
+};
+
+Card.propTypes = {
+  imageUrl: PropTypes.string.isRequired,
+  heading: PropTypes.string.isRequired,
+  subHeading: PropTypes.string,
+  actionLink: PropTypes.string.isRequired,
+};
 
 export default Card;

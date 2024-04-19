@@ -1,0 +1,25 @@
+/* alerts.css */
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+
+.alert.closeable {
+  padding-right: 40px;
+  position: relative;
+}
+
+.alert.closeable .closebtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.alert.success {background-color: #4CAF50;}
+.alert.info {background-color: #2196F3;}
+.alert.warning {background-color: #ff9800;}

@@ -21,7 +21,7 @@ function Nav({ toggle_theme }){
       <ul className="nav-links">
         <li><Switch toggle={toggle_theme} colorOne='#000' colorTwo='#fff'/></li>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/chat">Chat</Link></li>
+        <li><Link to="/member/chat">Chat</Link></li>
         <li>
           <div className="account-dropdown">
             <Link href="#account-dropdown" id="account-dropdown">

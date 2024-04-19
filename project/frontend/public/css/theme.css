@@ -1,0 +1,20 @@
+/* theme.css */
+:root {
+  --static-background: #ffffff;
+  --static-text: #000000;
+  --static-header-bg: #eeeeee;
+  --static-footer-bg: #eeeeee;
+  --static-link: #0066cc;
+  --static-highlight: #000;
+  --static-dull: #666;
+}
+
+.dark-theme {
+  --static-background: #121212;
+  --static-text: #e0e0e0;
+  --static-header-bg: #333333;
+  --static-footer-bg: #333333;
+  --static-link: #bb86fc;
+  --static-highlight: #fff;
+  --static-dull: #aaa;
+}

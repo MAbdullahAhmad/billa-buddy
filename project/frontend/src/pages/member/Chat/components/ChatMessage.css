@@ -1,0 +1,43 @@
+/* Defining color variables for themes */
+:root {
+  --cmessage-user-bg: #0b93f6; /* Blue color for the user messages (light theme) */
+  --cmessage-other-bg: #e5e5ea; /* Light color for other messages (light theme) */
+  --cmessage-text-color: black; /* Text color for light theme */
+}
+
+.dark-theme {
+  --cmessage-user-bg: #004880; /* Darker blue for user messages (dark theme) */
+  --cmessage-other-bg: #333; /* Darker background for other messages (dark theme) */
+  --cmessage-text-color: white; /* Text color for dark theme */
+}
+
+.chat-message {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.message-content {
+  max-width: 75%;
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: var(--cmessage-text-color); /* Use variable for text color */
+}
+
+/* Align your messages to the right if it's from the user, and to the left otherwise */
+.message-user {
+  justify-content: flex-end;
+}
+
+.message-user .message-content {
+  background-color: var(--cmessage-user-bg); /* Use variable for background color */
+}
+
+.message-other {
+  justify-content: flex-start;
+}
+
+.message-other .message-content {
+  background-color: var(--cmessage-other-bg); /* Use variable for background color */
+  color: var(--cmessage-text-color); /* Ensure text color is readable based on theme */
+}

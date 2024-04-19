@@ -1,0 +1,59 @@
+
+/* colors.css */
+:root {
+  /* Light theme colors */
+  --gradient-start: #89d4cf; /* Light gradient start */
+  --gradient-end: #734ae8; /* Light gradient end */
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  --ng-navy-start: #3aed99;
+  --ng-navy-end: #0891b2;
+}
+
+.dark-theme {
+  /* Dark theme colors */
+  --gradient-start: #0891b2; /* Dark gradient start */
+  --gradient-end: #7c3aed; /* Dark gradient end */
+  --box-shadow: 0 8px 32px rgba(0, 0, 255, 0.6);
+
+  --ng-navy-start: #24333e;
+  --ng-navy-end: #000000;
+}
+
+body {
+  background: var(--static-background);
+  color: var(--static-text);
+}
+
+.header {
+  background: var(--static-header-bg);
+}
+
+.footer {
+  background: var(--static-footer-bg);
+}
+
+.link {
+  color: var(--static-link);
+}
+
+.highlight {
+  color: var(--static-highlight);
+}
+
+.dull {
+  color: var(--static-dull);
+}
+
+.neon-gradient-basic {
+  background: linear-gradient(45deg, #bb86fc, #88e1f2);
+}
+
+.neon-gradient {
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+}
+
+
+.neon-gradient-navy {
+  background: linear-gradient(135deg, var(--ng-navy-start) 0%, var(--ng-navy-end) 100%);
+}

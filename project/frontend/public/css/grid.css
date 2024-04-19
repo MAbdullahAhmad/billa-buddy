@@ -1,0 +1,103 @@
+/* grid.css */
+
+
+/* breakpoints */
+:root {
+  /* Breakpoint variables */
+  --breakpoint-xs: 480px;  /* Extra small devices (phones) */
+  --breakpoint-sm: 768px;  /* Small devices (tablets) */
+  --breakpoint-md: 992px;  /* Medium devices (desktops) */
+  --breakpoint-lg: 1200px; /* Large devices (large desktops) */
+}
+
+/* Contaier */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Fluid container for full width */
+.container-fluid {
+  width: 100%;
+  padding-right: var(--gutter-width, 15px);
+  padding-left: var(--gutter-width, 15px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Responsive container sizes using breakpoints defined in :root */
+.container {
+  width: 100%;
+  padding-right: var(--gutter-width, 15px);
+  padding-left: var(--gutter-width, 15px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: var(--breakpoint-xs)) {
+  .container, .container-xs {
+    max-width: var(--breakpoint-xs);
+  }
+}
+
+@media (min-width: var(--breakpoint-sm)) {
+  .container, .container-sm {
+    max-width: var(--breakpoint-sm);
+  }
+}
+
+@media (min-width: var(--breakpoint-md)) {
+  .container, .container-md {
+    max-width: var(--breakpoint-md);
+  }
+}
+
+@media (min-width: var(--breakpoint-lg)) {
+  .container, .container-lg {
+    max-width: var(--breakpoint-lg);
+  }
+}
+
+@media (min-width: var(--breakpoint-xl)) {
+  .container, .container-xl {
+    max-width: var(--breakpoint-xl);
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+/* Existing content remains as it is */
+.column {
+  padding-right: 15px;
+  padding-left: 15px;
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+/* Add column sizing from 1 to 12 */
+[class*="col-"] {
+  flex-basis: 100%;
+  flex-grow: 0;
+}
+
+.col-1 { flex: 0 0 8.33%; }
+.col-2 { flex: 0 0 16.66%; }
+.col-3 { flex: 0 0 25%; }
+.col-4 { flex: 0 0 33.33%; }
+.col-5 { flex: 0 0 41.66%; }
+.col-6 { flex: 0 0 50%; }
+.col-7 { flex: 0 0 58.33%; }
+.col-8 { flex: 0 0 66.66%; }
+.col-9 { flex: 0 0 75%; }
+.col-10 { flex: 0 0 83.33%; }
+.col-11 { flex: 0 0 91.66%; }
+.col-12 { flex: 0 0 100%; }
